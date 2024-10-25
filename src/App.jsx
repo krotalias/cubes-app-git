@@ -205,9 +205,9 @@ function Box({ colorState, position, name } = props) {
      */
     const output = document.querySelector("#output");
     const [pmndrsImg, reactImg, threeImg] = useTexture([
-        "/pmndrs.png",
-        "/react.png",
-        "/three.png",
+        "./pmndrs.png",
+        "./react.png",
+        "./three.png",
     ]);
 
     /**
