@@ -1,54 +1,25 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <title>JSDoc: Source: App.jsx</title>
-
-        <script src="scripts/prettify/prettify.js"></script>
-        <script src="scripts/prettify/lang-css.js"></script>
-        <!--[if lt IE 9]>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-        <link
-            type="text/css"
-            rel="stylesheet"
-            href="styles/prettify-tomorrow.css"
-        />
-        <link
-            type="text/css"
-            rel="stylesheet"
-            href="styles/jsdoc-default.css"
-        />
-    </head>
-
-    <body>
-        <div id="main">
-            <h1 class="page-title">Source: App.jsx</h1>
-
-            <section>
-                <article>
-                    <pre class="prettyprint source linenums"><code>/**
+/**
  * @file
  *
  * Summary.
- * &lt;p>Two rotating cubes using {@link https://react.dev React}
- * with {@link https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite Vite}.&lt;/p>
- * When the mouse is hovered onto a cube, its color changes from orange to hotpink.&lt;br>
+ * <p>Two rotating cubes using {@link https://react.dev React}
+ * with {@link https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite Vite}.</p>
+ * When the mouse is hovered onto a cube, its color changes from orange to hotpink.<br>
  * When a cube is clicked, its scale is toggled from 1 to 1.5 and its color changes.
  * The process of selecting colors is more complicated than it seems, because
  * {@link external:react.useEffect React useState} is asynchronous!
  *
- * &lt;p>We label the cubes and their colors by calling Text,
+ * <p>We label the cubes and their colors by calling Text,
  * with Hi-quality rendering w/ signed distance fields (SDF) and antialiasing,
  * using {@link https://protectwise.github.io/troika/troika-three-text/ troika-3d-text}.
- * It is also possible to use Text3D, with {@link https://hyper2.com.br/js/fonts/ type face} fonts.&lt;/p>
+ * It is also possible to use Text3D, with {@link https://hyper2.com.br/js/fonts/ type face} fonts.</p>
  *
- * &lt;figure>
- *  &lt;img src="../Text3D.png" width="256">
- *  &lt;figcaption style="font-size: 100%">Text3D with bevel&lt;/figcaption>
- * &lt;/figure>
+ * <figure>
+ *  <img src="../Text3D.png" width="256">
+ *  <figcaption style="font-size: 100%">Text3D with bevel</figcaption>
+ * </figure>
  *
- * &lt;p>Finally, {@link https://codesandbox.io/p/sandbox/np6s28 decals}
+ * <p>Finally, {@link https://codesandbox.io/p/sandbox/np6s28 decals}
  * are applied to each face of the cubes.
  *
  * Decals are objects that interfere with the
@@ -59,47 +30,47 @@
  * {@link http://drei.docs.pmnd.rs/abstractions/decal#decal no material
  * is specified}, a transparent meshBasicMaterial
  * with a polygonOffsetFactor of -10 will be created,
- * producing an awkward effect when the cubes overlap.&lt;/p>
+ * producing an awkward effect when the cubes overlap.</p>
  *
- * &lt;figure>
- *  &lt;img src="../decals.png" width="256">
- *  &lt;figcaption style="font-size: 100%">Overlap with transparent meshBasicMaterial&lt;/figcaption>
- * &lt;/figure>
+ * <figure>
+ *  <img src="../decals.png" width="256">
+ *  <figcaption style="font-size: 100%">Overlap with transparent meshBasicMaterial</figcaption>
+ * </figure>
  *
- * &lt;figure>
- *  &lt;img src="../cubes2.png" width="256">
- *  &lt;figcaption style="font-size: 100%">meshBasicMaterial specified&lt;/figcaption>
- * &lt;/figure>
+ * <figure>
+ *  <img src="../cubes2.png" width="256">
+ *  <figcaption style="font-size: 100%">meshBasicMaterial specified</figcaption>
+ * </figure>
  *
- &lt;p>Usage: &lt;/p>
- * &lt;ul>
- *  &lt;li>To install {@link https://www.npmjs.com/package/jsdoc jsdoc},
+ <p>Usage: </p>
+ * <ul>
+ *  <li>To install {@link https://www.npmjs.com/package/jsdoc jsdoc},
  * {@link https://www.npmjs.com/package/vite Vite},
- * yarn and {@link https://pnpm.io pnpm}:&lt;/li>
- *  &lt;ul>
- *    &lt;li>sudo npm install --global vite&lt;/li>
- *    &lt;li>sudo npm install --global yarn&lt;/li>
- *    &lt;li>sudo npm install -g jsdoc&lt;/li>
- *    &lt;li>sudo npm install -g pnpm&lt;/li>
- *  &lt;/ul>
- *  &lt;li>To run the version with modules and Node.js version
+ * yarn and {@link https://pnpm.io pnpm}:</li>
+ *  <ul>
+ *    <li>sudo npm install --global vite</li>
+ *    <li>sudo npm install --global yarn</li>
+ *    <li>sudo npm install -g jsdoc</li>
+ *    <li>sudo npm install -g pnpm</li>
+ *  </ul>
+ *  <li>To run the version with modules and Node.js version
  *     {@link https://nodejs.org/en/blog/release/v18.19.0 18} or
- *     {@link https://nodejs.org/en/blog/release/v20.10.0 20}:&lt;/li>
- *  &lt;ul>
- *    &lt;li>cd cubes&lt;/li>
- *    &lt;li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install&lt;/li>
- *    &lt;li>{@link https://www.npmjs.com npm} run dev -- --host (for using vite) &lt;br> or
- *        {@link https://www.npmjs.com npm} start &lt;br> or
- *        {@link https://yarnpkg.com/package/react yarn} start&lt;/li>
- *  &lt;/ul>
- * &lt;/ul>
+ *     {@link https://nodejs.org/en/blog/release/v20.10.0 20}:</li>
+ *  <ul>
+ *    <li>cd cubes</li>
+ *    <li>{@link https://www.npmjs.com npm} or {@link https://yarnpkg.com yarn} install</li>
+ *    <li>{@link https://www.npmjs.com npm} run dev -- --host (for using vite) <br> or
+ *        {@link https://www.npmjs.com npm} start <br> or
+ *        {@link https://yarnpkg.com/package/react yarn} start</li>
+ *  </ul>
+ * </ul>
  *
  * @author Paulo Roma
  * @since 10/10/2024
- * @see &lt;a href="App.jsx">source&lt;/a>
- * @see &lt;a href="https://krotalias.github.io/cubes-app-git/">link&lt;/a>
+ * @see <a href="../src/App.jsx">source</a>
+ * @see <a href="https://krotalias.github.io/cubes-app-git/">link</a>
  * @see {@link https://codesandbox.io/p/sandbox/sfypdx original code}
- * @see &lt;img src="../cubes.png" width="340">
+ * @see <img src="../cubes.png" width="340">
  */
 
 import { useRef, useState, useEffect, Suspense } from "react";
@@ -125,7 +96,7 @@ import "./index.css";
  */
 
 /**
- * &lt;p>React&lt;/p>
+ * <p>React</p>
  * The library for web and native user interfaces
  * @external react
  * @see {@link https://react.dev/ React Top-Level API}
@@ -136,16 +107,16 @@ import "./index.css";
  */
 
 /**
- * &lt;p>React DOM.&lt;/p>
+ * <p>React DOM.</p>
  * The react-dom package contains methods that are only supported
  * for the web applications (which run in the browser DOM environment).
- * &lt;p>They are not supported for React Native.&lt;/p>
+ * <p>They are not supported for React Native.</p>
  * @external react-dom
  * @see {@link https://react.dev/reference/react-dom React DOM APIs}
  */
 
 /**
- * &lt;p>A React renderer for three.js.&lt;/p>
+ * <p>A React renderer for three.js.</p>
  * Build your scene declaratively with re-usable,
  * self-contained components that react to state,
  * are readily interactive and can participate in React's ecosystem.
@@ -178,11 +149,11 @@ import "./index.css";
  */
 
 /**
- * &lt;p>Color table.&lt;/p>
+ * <p>Color table.</p>
  * RGB primary colors and their
  * {@link https://en.wikipedia.org/wiki/Complementary_colors complementary}
  * colors, CYM, used for printing.
- * @type {Object&lt;Number, String>}
+ * @type {Object<Number, String>}
  */
 const colors = {
     0: "red",
@@ -205,7 +176,7 @@ const ncolors = Object.keys(colors).length - 2;
  * Box component.
  * @param {Object} props information that you pass to a JSX tag.
  * @param {React.MutableRefObject} props.color.State color state.
- * @param {Array&lt;Number>} props.position box position.
+ * @param {Array<Number>} props.position box position.
  * @param {String} props.name box name.
  * @returns {ThreeElements} view as regular three.js elements expressed in JSX.
  */
@@ -261,14 +232,14 @@ function Box({ colorState, position, name } = props) {
     const setOutput = (txt, cor) => {
         if (output) {
             output.style.color = colors[cor];
-            output.innerHTML = `${txt}&lt;br /> name: ${meshRef.current.name}, color: ${cor} → ${colors[cor]}`;
+            output.innerHTML = `${txt}<br /> name: ${meshRef.current.name}, color: ${cor} → ${colors[cor]}`;
         }
     };
 
     /**
-     * &lt;p>React {@link https://react.dev/reference/react/useState useState}
-     * hook is asynchronous!&lt;/p>
-     * &lt;p>Basically, you don't get update value right after updating state.&lt;/p>
+     * <p>React {@link https://react.dev/reference/react/useState useState}
+     * hook is asynchronous!</p>
+     * <p>Basically, you don't get update value right after updating state.</p>
      *
      * The {@link https://react.dev/reference/react/useEffect useEffect}
      * hook executes after the function returns
@@ -276,8 +247,8 @@ function Box({ colorState, position, name } = props) {
      * which means that any ref or state will be assigned before
      * the useEffect hook gets called.
      *
-     * &lt;p>This code will always use the latest value of clicked,
-     * which will be used in the next draw.&lt;/p>
+     * <p>This code will always use the latest value of clicked,
+     * which will be used in the next draw.</p>
      *
      * @function useEffect
      * @memberof external:react
@@ -295,7 +266,7 @@ function Box({ colorState, position, name } = props) {
     }, [clicked]);
 
     return (
-        &lt;mesh
+        <mesh
             position={position}
             name={name}
             ref={meshRef}
@@ -347,72 +318,72 @@ function Box({ colorState, position, name } = props) {
                 setOutput("Unhovered", ncolors);
             }}
         >
-            &lt;boxGeometry args={[1, 1, 1]} />
-            &lt;meshStandardMaterial color={colors[color]} />
-            &lt;Decal position={[0.5, 0, 0]} scale={0.75}>
-                &lt;meshBasicMaterial
+            <boxGeometry args={[1, 1, 1]} />
+            <meshStandardMaterial color={colors[color]} />
+            <Decal position={[0.5, 0, 0]} scale={0.75}>
+                <meshBasicMaterial
                     map={reactImg}
                     polygonOffset
                     polygonOffsetFactor={-1}
                 />
-            &lt;/Decal>
-            &lt;Decal position={[-0.5, 0, 0]} scale={0.75}>
-                &lt;meshBasicMaterial
+            </Decal>
+            <Decal position={[-0.5, 0, 0]} scale={0.75}>
+                <meshBasicMaterial
                     map={reactImg}
                     polygonOffset
                     polygonOffsetFactor={-1}
                 />
-            &lt;/Decal>
-            &lt;Decal
+            </Decal>
+            <Decal
                 position={[0, 0.5, 0]}
                 rotation={[Math.PI / 3, 0, 0]}
                 scale={[0.75, 0.65, 1]}
             >
-                &lt;meshBasicMaterial
+                <meshBasicMaterial
                     map={threeImg}
                     polygonOffset
                     polygonOffsetFactor={-1}
                 />
-            &lt;/Decal>
-            &lt;Decal
+            </Decal>
+            <Decal
                 position={[0, -0.5, 0]}
                 rotation={[Math.PI / 3, 0, 0]}
                 scale={[0.75, 0.65, 1]}
             >
-                &lt;meshBasicMaterial
+                <meshBasicMaterial
                     map={threeImg}
                     polygonOffset
                     polygonOffsetFactor={-1}
                 />
-            &lt;/Decal>
-            &lt;Decal position={[0, 0, 0.5]} rotation={[0, 0, 0]} scale={0.75}>
-                &lt;meshBasicMaterial
+            </Decal>
+            <Decal position={[0, 0, 0.5]} rotation={[0, 0, 0]} scale={0.75}>
+                <meshBasicMaterial
                     map={pmndrsImg}
                     polygonOffset
                     polygonOffsetFactor={-2}
                 />
-            &lt;/Decal>
-            &lt;Decal
+            </Decal>
+            <Decal
                 position={[0, 0, -0.5]}
                 rotation={[0, 0, -Math.PI / 2]}
                 scale={0.75}
             >
-                &lt;meshBasicMaterial
+                <meshBasicMaterial
                     map={pmndrsImg}
                     polygonOffset
                     polygonOffsetFactor={-2}
                 />
-            &lt;/Decal>
-        &lt;/mesh>
+            </Decal>
+        </mesh>
     );
 }
 
 /**
  * Creates a text with the Box identifier and color used.
- * &lt;pre>
+ * <pre>
  *    Box 1 (Text)
  *  color: 5 → yellow
- * &lt;/pre>
+ * </pre>
  * @param {String} txt text.
  * @param {Number} color text color index.
  * @returns {String} composed text.
@@ -429,7 +400,7 @@ function createText(txt, color) {
 /**
  * Display a {@link external:react-three/drei 3D text}.
  * @param {Object} props information that you pass to a JSX tag.
- * @param {Array&lt;Number>} props.position text position.
+ * @param {Array<Number>} props.position text position.
  * @param {String} props.txt text.
  * @param {String} props.color text color.
  * @returns {ThreeElements} view as regular three.js elements expressed in JSX.
@@ -444,9 +415,9 @@ function DisplayText3D({ position, txt, color } = props) {
     const fsize = Math.max(d / 30, 0.08);
 
     // const [matcapTexture] = useMatcapTexture("CB4E88_F99AD6_F384C3_ED75B9");
-    // &lt;meshMatcapMaterial color={cor} matcap={matcapTexture} />
+    // <meshMatcapMaterial color={cor} matcap={matcapTexture} />
     return (
-        &lt;Text3D
+        <Text3D
             position={position}
             scale={[1, 1, 0.1]}
             size={fsize}
@@ -462,15 +433,15 @@ function DisplayText3D({ position, txt, color } = props) {
             letterSpacing={0.02}
         >
             {txt}
-            &lt;meshStandardMaterial color={color} />
-        &lt;/Text3D>
+            <meshStandardMaterial color={color} />
+        </Text3D>
     );
 }
 
 /**
  * Display a {@link external:react-three/drei text}.
  * @param {Object} props information that you pass to a JSX tag.
- * @param {Array&lt;Number>} props.position text position.
+ * @param {Array<Number>} props.position text position.
  * @param {String} props.txt text.
  * @param {String} props.color text color.
  * @returns {ThreeElements} view as regular three.js elements expressed in JSX.
@@ -481,7 +452,7 @@ function DisplayText({ position, txt, color } = props) {
     const fsize = Math.max(d / 15, 0.18);
 
     return (
-        &lt;Text
+        <Text
             position={position}
             fontSize={fsize}
             color={color}
@@ -489,13 +460,13 @@ function DisplayText({ position, txt, color } = props) {
             anchorY="middle"
         >
             {txt}
-        &lt;/Text>
+        </Text>
     );
 }
 
 /**
- * &lt;p>Returns a {@link https://legacy.reactjs.org/docs/introducing-jsx.html JSX}
- * element with a R3F canvas.&lt;/p>
+ * <p>Returns a {@link https://legacy.reactjs.org/docs/introducing-jsx.html JSX}
+ * element with a R3F canvas.</p>
  * When you want to aggregate data from multiple children or to have two child components communicate with each other,
  * move the state upwards so that it lives in the parent component.
  * The parent can then pass the state back down to the children via props,
@@ -509,137 +480,55 @@ export default function App() {
     const cs1 = useState(false);
     const cs2 = useState(false);
     return (
-        &lt;>
-            &lt;div id="output">&lt;/div>
-            &lt;Canvas camera={{ fov: 35, position: [0, 0, 4] }}>
-                &lt;OrbitControls />
-                &lt;ambientLight intensity={Math.PI / 2} />
-                &lt;spotLight
+        <>
+            <div id="output"></div>
+            <Canvas camera={{ fov: 35, position: [0, 0, 4] }}>
+                <OrbitControls />
+                <ambientLight intensity={Math.PI / 2} />
+                <spotLight
                     position={[10, 10, 10]}
                     angle={0.15}
                     penumbra={1}
                     decay={0}
                     intensity={Math.PI}
                 />
-                &lt;pointLight
+                <pointLight
                     position={[-10, -10, -10]}
                     decay={0}
                     intensity={Math.PI}
                 />
-                &lt;Suspense>
-                    &lt;Bounds fit clip margin={1.2} damping={0}>
-                        &lt;Box
+                <Suspense>
+                    <Bounds fit clip margin={1.2} damping={0}>
+                        <Box
                             position={[-1.2, 0, 0]}
                             name={"Box1"}
                             colorState={cs1}
                         />
-                        &lt;Box
+                        <Box
                             position={[1.2, 0, 0]}
                             name={"Box2"}
                             colorState={cs2}
                         />
-                        &lt;DisplayText
+                        <DisplayText
                             position={[-1.2, 1.5, 0]}
                             txt={createText("Box 1 (Text)", cs1[0])}
                             color={colors[cs1[0]]}
                         />
-                        &lt;DisplayText
+                        <DisplayText
                             position={[1.2, 1.5, 0]}
                             txt={createText("Box 2 (Text)", cs2[0])}
                             color={colors[cs2[0]]}
                         />
-                        &lt;Center top center>
-                            &lt;DisplayText3D
+                        <Center top center>
+                            <DisplayText3D
                                 position={[0, 0, 0]}
                                 txt={"R3F (Text3D)"}
                                 color={"#C0C0C0"}
                             />
-                        &lt;/Center>
-                    &lt;/Bounds>
-                &lt;/Suspense>
-            &lt;/Canvas>
-        &lt;/>
+                        </Center>
+                    </Bounds>
+                </Suspense>
+            </Canvas>
+        </>
     );
 }
-</code></pre>
-                </article>
-            </section>
-        </div>
-
-        <nav>
-            <h2><a href="index.html">Home</a></h2>
-            <h3>Externals</h3>
-            <ul>
-                <li><a href="external-THREE.html">THREE</a></li>
-                <li><a href="external-react.html">react</a></li>
-                <li><a href="external-react-dom.html">react-dom</a></li>
-                <li>
-                    <a href="external-react-dom_client.html"
-                        >react-dom/client</a
-                    >
-                </li>
-                <li>
-                    <a href="external-react-three_drei.html"
-                        >react-three/drei</a
-                    >
-                </li>
-                <li>
-                    <a href="external-react-three_fiber.html"
-                        >react-three/fiber</a
-                    >
-                </li>
-            </ul>
-            <h3>Events</h3>
-            <ul>
-                <li>
-                    <a
-                        href="global.html#event:click-firesafterboththemousedownandmouseupeventshavefiredinthatorder."
-                        >click - fires after both the mousedown and mouseup
-                        events have fired in that order.</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="global.html#event:pointout-firedwhenapointingdeviceismovedoutofthehittestboundariesofanelement."
-                        >pointout - fired when a pointing device is moved out of
-                        the hit test boundaries of an element.</a
-                    >
-                </li>
-                <li>
-                    <a
-                        href="global.html#event:pointover-firedwhenapointingdeviceismovedintoanelement'shittestboundaries."
-                        >pointover - fired when a pointing device is moved into
-                        an element's hit test boundaries.</a
-                    >
-                </li>
-            </ul>
-            <h3>Global</h3>
-            <ul>
-                <li><a href="global.html#App">App</a></li>
-                <li><a href="global.html#Box">Box</a></li>
-                <li><a href="global.html#DisplayText">DisplayText</a></li>
-                <li><a href="global.html#DisplayText3D">DisplayText3D</a></li>
-                <li><a href="global.html#colors">colors</a></li>
-                <li><a href="global.html#createText">createText</a></li>
-                <li><a href="global.html#meshRef">meshRef</a></li>
-                <li><a href="global.html#ncolors">ncolors</a></li>
-                <li><a href="global.html#nextColor">nextColor</a></li>
-                <li><a href="global.html#output">output</a></li>
-                <li><a href="global.html#setOutput">setOutput</a></li>
-            </ul>
-        </nav>
-
-        <br class="clear" />
-
-        <footer>
-            Documentation generated by
-            <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Fri Oct
-            25 2024 11:55:48 GMT-0300 (Brasilia Standard Time)
-        </footer>
-
-        <script>
-            prettyPrint();
-        </script>
-        <script src="scripts/linenumber.js"></script>
-    </body>
-</html>
