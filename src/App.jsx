@@ -67,7 +67,7 @@
  *
  * @author Paulo Roma
  * @since 10/10/2024
- * @see <a href="../src/App.jsx">source</a>
+ * @see {@link https://raw.githubusercontent.com/krotalias/cubes-app-git/main/src/App.jsx source}
  * @see <a href="https://krotalias.github.io/cubes-app-git/">link</a>
  * @see {@link https://codesandbox.io/p/sandbox/sfypdx original code}
  * @see <img src="../cubes.png" width="340">

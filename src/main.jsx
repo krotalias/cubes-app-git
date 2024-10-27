@@ -6,7 +6,7 @@
  *
  * @since 10/10/2024
  * @author Paulo Roma.
- * @see <a href="../src/main.jsx">source</a>
+ * @see {@link https://raw.githubusercontent.com/krotalias/cubes-app-git/main/src/main.jsx source}
  * @see <a href="https://krotalias.github.io/cubes-app-git/">link</a>
  * @see {@link external:react-dom/client.createRoot createRoot}
  * @see {@link external:react-three/fiber R3F}
