@@ -63,6 +63,8 @@
  *        {@link https://www.npmjs.com npm} start <br> or
  *        {@link https://yarnpkg.com/package/react yarn} start</li>
  *  </ul>
+ *  <li>The {@link https://www.vd-developer.online/blog/vite-react-deploy-github steps} to
+ *  {@link https://www.youtube.com/watch?v=Bk28snjHr7c deploy} on github pages.</li>
  * </ul>
  *
  * @author Paulo Roma
@@ -70,7 +72,7 @@
  * @see {@link https://raw.githubusercontent.com/krotalias/cubes-app-git/main/src/App.jsx source}
  * @see <a href="https://krotalias.github.io/cubes-app-git/">link</a>
  * @see {@link https://codesandbox.io/p/sandbox/sfypdx original code}
- * @see <img src="../cubes.png" width="340">
+ * @see <iframe title="Cubes" src="https://krotalias.github.io/cubes-app-git/" style="position: relative; right: 40px; margin-bottom: 0px; transform: scale(0.85); width: 380px; height: 380px"></iframe>
  */
 
 import { useRef, useState, useEffect, Suspense } from "react";
@@ -128,6 +130,8 @@ import "./index.css";
  * @see {@link https://byteofdev.com/posts/how-to-use-esm/ How to use ESM}
  * @see {@link https://www.youtube.com/watch?v=DPl34H2ISsk I wish I knew this before using React Three Fiber}
  * @see {@link https://r3f.docs.pmnd.rs/tutorials/how-it-works How does it work?}
+ * @see {@link https://dev.to/studio_hungry/notes-on-react-three-fiber-4f8g Notes on react-three-fiber}
+ * @see {@link https://codyb.co/articles/a-technical-breakdown-of-react-three-fiber A technical breakdown of react-three-fiber}
  */
 
 /**
